@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.yixi</groupId>
+  <artifactId>thyme-dependencies</artifactId>
+  <version>1.1.4-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Thyme Dependencies</name>
+  <description>Thyme Dependencies</description>
+  <url>https://git.ydl.com/thyme</url>
+  <organization>
+    <name>ydl, Inc.</name>
+    <url>http://www.ydl.com</url>
+  </organization>
+  <developers>
+    <developer>
+      <id>zhaojing</id>
+      <name>赵静</name>
+      <email>zhaojing@ydl.com</email>
+      <organization>ydl, Inc.</organization>
+      <organizationUrl>http://www.ydl.com</organizationUrl>
+      <roles>
+        <role>Project Maintainer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <properties>
+    <xlsx-streamer.version>2.1.0</xlsx-streamer.version>
+    <supercsv.version>2.3.1</supercsv.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.yixi</groupId>
+        <artifactId>thyme-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.yixi</groupId>
+        <artifactId>thyme-http-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.yixi</groupId>
+        <artifactId>thyme-data-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.yixi</groupId>
+        <artifactId>thyme-data-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.yixi</groupId>
+        <artifactId>thyme-data-mongo</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.yixi</groupId>
+        <artifactId>thyme-data-mongo-starter</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.yixi</groupId>
+        <artifactId>thyme-data-mysql</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.yixi</groupId>
+        <artifactId>thyme-data-mysql-starter</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.yixi</groupId>
+        <artifactId>thyme-tool</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.monitorjbl</groupId>
+        <artifactId>xlsx-streamer</artifactId>
+        <version>${xlsx-streamer.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>net.sf.supercsv</groupId>
+        <artifactId>super-csv</artifactId>
+        <version>${supercsv.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <distributionManagement>
+    <repository>
+      <id>nexus-releases</id>
+      <name>Nexus Releases Repository Pro</name>
+      <url>http://nexus.yidianling.com/repository/releases/</url>
+    </repository>
+
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <name>Nexus Snapshots Repository Pro</name>
+      <url>http://nexus.yidianling.com/repository/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

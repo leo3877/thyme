@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.yixi</groupId>
+    <artifactId>yixi-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>thyme</artifactId>
+  <packaging>pom</packaging>
+
+  <version>1.1.4-SNAPSHOT</version>
+  <modules>
+    <module>thyme-core</module>
+    <module>thyme-data</module>
+    <module>thyme-http-client</module>
+    <module>thyme-tool</module>
+    <module>thyme-dependencies</module>
+    <module>thyme-proxy</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <!-- Import dependency management from Thyme -->
+        <groupId>org.yixi</groupId>
+        <artifactId>thyme-dependencies</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <distributionManagement>
+    <repository>
+      <id>nexus-releases</id>
+      <name>Nexus Releases Repository Pro</name>
+      <url>http://nexus.yidianling.com/repository/releases/</url>
+    </repository>
+
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <name>Nexus Snapshots Repository Pro</name>
+      <url>http://nexus.yidianling.com/repository/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

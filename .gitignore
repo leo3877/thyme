@@ -1,0 +1,12 @@
+*.iml
+*.ipr
+*.iws
+*.log
+.DS_Store
+
+.history
+logs/
+
+.idea/
+target/
+node_modules/

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>thyme</artifactId>
+    <groupId>org.yixi</groupId>
+    <version>1.1.4-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>thyme-data</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+    <module>thyme-data-core</module>
+    <module>thyme-data-mongo</module>
+    <module>thyme-data-client</module>
+    <module>thyme-data-mysql</module>
+    <module>thyme-data-mongo-starter</module>
+    <module>thyme-data-mysql-starter</module>
+  </modules>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.yixi</groupId>
+      <artifactId>thyme-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+</project>
